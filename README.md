@@ -12,5 +12,6 @@ As the name says, the functionality of this webserver is very simple but it catc
 		- (GET): For this type of request, parseRequest is going to extract the path of the file that is being requested and return it. ( then _start: is going to read the content of the file and write it to the socket )
 		- (POST): For this type of request, parseRequest is going to extract the path of the file that is being requested, get the value of the "Content-Length" header and save the post data. ( then _start: is going to write the post data content into the file specified in the request )
 - There is also some functions as "utility" ( findStr, getLength...etc ). All this functions has a explanatory comment.
+- Also, im not using the standard library so you can compile with: `gcc -nostdlib -o server server.s`
 
 *I must say that i'm ignoring (sometimes) the ABI conventions but, yeah wharever*
